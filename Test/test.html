@@ -1,0 +1,58 @@
+<script type="text/javascript">
+    function A(){
+        var count = 0;
+        function B(){
+            count++;
+            alert(count);
+        }
+        return B;
+    }
+    var c = A();
+    c();                    //1
+    c();                    //2
+    c();                    //3
+    var d = A();
+    d();
+    d();
+    d();
+
+
+//从前，有一位公主
+
+function princess() {
+
+    /* 
+        她生活在一个充满奇幻冒险的世界里, 她遇到了她的白马王子, 带着他骑着独角兽开始周游这个世界，与巨龙战斗，巧遇会说话的动物，还有其他一些新奇的事物。
+    */  
+
+    var adventures = [];
+
+    function princeCharming() { /* ... */ }         //白马王子
+
+    var unicorn = { /* ... */ },                    //独角兽
+        dragons = [ /* ... */ ],                    //龙
+        squirrel = "Hello!";                        //松鼠
+
+    adventures.push(unicorn, dragons, squirrel);
+
+    //但是她不得不回到她的王国里，面对那些年老的大臣。
+
+    return {
+
+        //她会经常给那些大臣们分享她作为公主最近在外面充满奇幻的冒险经历。
+        story: function() {
+            alert("ok");
+            return adventures[adventures.length - 1];
+        }
+    };
+}
+
+//但是在大臣们的眼里，总是认为她只是个小女孩
+
+var littleGirl = princess();
+
+//讲的是一些不切实际，充满想象的故事
+
+littleGirl.story();
+
+</script>
